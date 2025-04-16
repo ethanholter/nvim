@@ -9,3 +9,6 @@ sudo rm -f ./nvim-linux-x86_64.tar.gz
 sudo mv /opt/nvim-linux-x86_64 /opt/nvim
 sudo ln -s /opt/nvim/bin/nvim /usr/local/bin/nvim
 git clone https://github.com/ethanholter/dotfiles.nvim ~/.config/nvim
+curl -LO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/0xProto.tar.xz
+sudo tar -xvf 0xProto.tar.xz -C /usr/local/share/fonts/
+sudo fc-cache -fv
