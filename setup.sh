@@ -1,11 +1,13 @@
 #! /usr/bin/env bash
 set -euo pipefail
 
-curl -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz -o ${temp_dir}/nvim.tar.gz
+sudo curl -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz -o /opt/nvim-linux-x86_64.tar.gz
 
 # download nvim
 sudo rm -rf /opt/nvim
-sudo tar -C /opt -xzf ${temp_dir}/nvim.tar.gz
+sudo tar -C /opt/ -xzf /opt/nvim-linux-x86_64.tar.gz
+sudo rm -f /opt/nvim-linux-x86_64.tar.gz
+sudo mv /opt/nvim-linux-x86_64 /opt/nvim
 
 # link binary to bin directory so it will be in the path without messing with the path var itself
 sudo rm -f /usr/local/bin/nvim
