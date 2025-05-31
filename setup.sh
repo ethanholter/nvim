@@ -14,9 +14,15 @@ sudo rm -f /usr/local/bin/nvim
 sudo ln -s /opt/nvim/bin/nvim /usr/local/bin/nvim
 
 # setup config
-rm -rf ~/.config/nvim
-git clone https://github.com/ethanholter/nvim ~/.config/nvim
-
+if [ ! -d ~/.config/nvim ]; then
+    rm -rf ~/.config/nvim
+    git clone https://github.com/ethanholter/nvim ~/.config/nvim
+else
+    pushd .
+    cd ~/.config/nvim
+    git pull
+    popd
+fi
 # setup nerd font
 #FONT="JetBrainsMono"
 #curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/${FONT}.tar.xz -o ${temp_dir}/${FONT}.tar.xz
