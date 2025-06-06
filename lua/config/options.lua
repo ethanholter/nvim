@@ -6,4 +6,3 @@ opt.clipboard = 'unnamedplus'
 
 opt.shiftwidth = 4
 opt.number = true
-

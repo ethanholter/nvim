@@ -20,6 +20,11 @@ keymap.set('n', 'J', '<Nop>')
 keymap.set('n', 'H', 'gT')
 keymap.set('n', 'L', 'gt')
 
+-- ============
+-- LEADER MAPS
+-- ============
+
 -- Neotree
 keymap.set('n', '<leader>e', ':Neotree toggle<cr>', { silent = true })
 
+keymap.set('n', '<leader>bt', '<c-w>T', { desc = "Move buffer to new tabs"})

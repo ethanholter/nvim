@@ -1,5 +1,4 @@
 return {
-{
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
   dependencies = {
@@ -12,7 +11,13 @@ return {
   ---@module "neo-tree"
   ---@type neotree.Config?
   opts = {
-    -- fill any relevant options here
+     filesystem = {
+       window = {
+         mappings = {
+           -- disable fuzzy finder
+           ["<space>"] = "noop"
+         }
+       }
+     }
   },
-}
 }

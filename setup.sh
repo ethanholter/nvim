@@ -1,17 +1,19 @@
 #! /usr/bin/env bash
 set -euo pipefail
 
-sudo curl -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz -o /opt/nvim-linux-x86_64.tar.gz
-
-# download nvim
 sudo rm -rf /opt/nvim
-sudo tar -C /opt/ -xzf /opt/nvim-linux-x86_64.tar.gz
-sudo rm -f /opt/nvim-linux-x86_64.tar.gz
-sudo mv /opt/nvim-linux-x86_64 /opt/nvim
+sudo curl -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage -o /opt/nvim-linux-x86_64.appimage
+(
+    cd /opt/ && 
+    sudo chmod u+x nvim-linux-x86_64.appimage && 
+    sudo ./nvim-linux-x86_64.appimage --appimage-extract &&
+    sudo mv squashfs-root nvim &&
+    sudo rm nvim-linux-x86_64.appimage
+)
 
 # link binary to bin directory so it will be in the path without messing with the path var itself
 sudo rm -f /usr/local/bin/nvim
-sudo ln -s /opt/nvim/bin/nvim /usr/local/bin/nvim
+sudo ln -s /opt/nvim/usr/bin/nvim /usr/local/bin/nvim
 
 # setup config
 if [ ! -d ~/.config/nvim ]; then
