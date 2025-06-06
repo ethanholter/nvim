@@ -20,6 +20,9 @@ keymap.set('n', 'J', '<Nop>')
 keymap.set('n', 'H', 'gT')
 keymap.set('n', 'L', 'gt')
 
+-- Conflict with tmux
+keymap.set('n', '<c-b>', '<Nop>')
+
 -- ============
 -- LEADER MAPS
 -- ============
@@ -28,3 +31,10 @@ keymap.set('n', 'L', 'gt')
 keymap.set('n', '<leader>e', ':Neotree toggle<cr>', { silent = true })
 
 keymap.set('n', '<leader>bt', '<c-w>T', { desc = "Move buffer to new tabs"})
+
+-- Telescope
+keymap.set('n', '<leader>tr', ':Telescope live_grep<cr>')
+keymap.set('n', '<leader>tf', ':Telescope find_files<cr>')
+keymap.set('n', '<leader>tt', ':Telescope<cr>')
+keymap.set('n', '<leader>tm', ':Telescope man_pages<cr>')
+keymap.set('n', '<leader>th', ':Telescope help_tags<cr>')
