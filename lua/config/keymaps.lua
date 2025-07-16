@@ -33,8 +33,11 @@ keymap.set('n', '<leader>e', ':Neotree toggle<cr>', { silent = true })
 keymap.set('n', '<leader>bt', '<c-w>T', { desc = "Move buffer to new tabs"})
 
 -- Telescope
-keymap.set('n', '<leader>tr', ':Telescope live_grep<cr>')
-keymap.set('n', '<leader>tf', ':Telescope find_files<cr>')
-keymap.set('n', '<leader>tt', ':Telescope<cr>')
-keymap.set('n', '<leader>tm', ':Telescope man_pages<cr>')
-keymap.set('n', '<leader>th', ':Telescope help_tags<cr>')
+keymap.set('n', '<leader>fr', ':Telescope live_grep hidden=true<cr>')
+keymap.set('n', '<leader>ff', ':Telescope find_files hidden=true<cr>')
+keymap.set('n', '<leader>ft', ':Telescope<cr>')
+keymap.set('n', '<leader>fm', ':Telescope man_pages<cr>')
+keymap.set('n', '<leader>fh', ':Telescope help_tags<cr>')
+
+
+keymap.set('n', '<leader>ci', 'm`ggVG=<c-o>', {desc = "Fix indentation"})
