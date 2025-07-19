@@ -165,10 +165,6 @@ return {
       vim.cmd [[
           autocmd FileType alpha setlocal nofoldenable
       ]]
-
-      -- Keymap
-      -- Open dashboard
-      vim.api.nvim_set_keymap('n', '<leader>h', ':Alpha<CR>', { noremap = true, silent = true })
     end,
   },
 }

@@ -1,7 +1,6 @@
 local keymap = vim.keymap
+local wk = require("which-key")
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
 
 -- Save with <C-S> in normal and insert modes
 keymap.set('n', '<C-S>', '<Esc>:w<CR>', { noremap = true })
@@ -27,8 +26,11 @@ keymap.set('n', '<c-b>', '<Nop>')
 -- LEADER MAPS
 -- ============
 
+
+keymap.set('n', '<leader>l', ':Lazy<CR>', { silent = true })
+
 -- Neotree
-keymap.set('n', '<leader>e', ':Neotree toggle<cr>', { silent = true })
+keymap.set('n', '<leader>e', ':Neotree<cr>', { silent = true })
 
 keymap.set('n', '<leader>bt', '<c-w>T', { desc = "Move buffer to new tabs"})
 
@@ -39,5 +41,14 @@ keymap.set('n', '<leader>ft', ':Telescope<cr>')
 keymap.set('n', '<leader>fm', ':Telescope man_pages<cr>')
 keymap.set('n', '<leader>fh', ':Telescope help_tags<cr>')
 
-
 keymap.set('n', '<leader>ci', 'm`ggVG=<c-o>', {desc = "Fix indentation"})
+
+-- ============
+-- LEADER MAPS
+-- ============
+
+wk.add({
+    { "<leader>f", group = "find"},
+    { "<leader>c", group = "code"},
+    { "<leader>b", group = "buffer"},
+})
