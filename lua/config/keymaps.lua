@@ -24,6 +24,8 @@ keymap.set('n', '<leader>fh', ':Telescope help_tags<cr>')
 
 keymap.set('n', '<leader>ci', 'm`ggVG=<c-o>', {desc = "Fix indentation"})
 
+vim.keymap.set('n', 'K', vim.lsp.buf.hover, {desc = "Show hover documentation"})
+
 -- ============
 -- LEADER MAPS
 -- ============
