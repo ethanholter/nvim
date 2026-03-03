@@ -5,6 +5,7 @@ opt.clipboard = 'unnamedplus'
 
 -- indentation
 opt.shiftwidth = 4
+opt.wrap = false
 
 -- line numbers
 opt.rnu = true
