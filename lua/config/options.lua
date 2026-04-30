@@ -10,6 +10,7 @@ opt.wrap = false
 -- line numbers
 opt.rnu = true
 opt.nu = true
+opt.expandtab = true
 
 -- Use case-sensitive search if search contains uppercase letter
 opt.ignorecase = true

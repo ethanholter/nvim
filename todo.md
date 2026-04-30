@@ -1,0 +1,1 @@
+- [ ] setup conform.nvim for formatting
