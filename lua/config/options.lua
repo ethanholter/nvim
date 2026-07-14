@@ -11,6 +11,7 @@ opt.wrap = false
 opt.rnu = true
 opt.nu = true
 opt.expandtab = true
+opt.scrolloff = 5
 
 -- Use case-sensitive search if search contains uppercase letter
 opt.ignorecase = true
