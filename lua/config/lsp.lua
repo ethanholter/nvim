@@ -42,13 +42,7 @@ vim.lsp.config("lua_ls", {
     cmd = { "lua-language-server" },
     filetypes = { "lua" },
     root_markers = { ".luarc.json", ".luarc.jsonc" },
-    settings = {
-        Lua = {
-            runtime = {
-                version = "LuaJIT",
-            },
-        },
-    },
+    settings = { Lua = { runtime = { version = "LuaJIT", }, }, },
 })
 
 -- nix
@@ -57,4 +51,19 @@ vim.lsp.config("nix", {
     filetypes = { "nix" }
 })
 
-vim.lsp.enable({ "lua_ls", "clangd", "nix" })
+-- python
+vim.lsp.config("basedpyright", {
+    cmd = { "basedpyright-langserver", "--stdio" },
+    filetypes = { "python" },
+    root_markers = { "pyrightconfig.json", "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile", ".git" },
+})
+vim.lsp.config("ruff", {
+    cmd = { "ruff", "server" },
+    filetypes = { "python" },
+    root_markers = { "pyproject.toml", "ruff.toml", ".ruff.toml", ".git" },
+    on_attach = function (client)
+        client.server_capabilities.hoverProvider = false
+    end
+})
+
+vim.lsp.enable({ "lua_ls", "clangd", "nix", "basedpyright", "ruff" })
