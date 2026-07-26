@@ -1,7 +1,7 @@
 local opt = vim.opt
 
 -- allow registers to interact with system clipboard. must have xclip installed
-opt.clipboard = 'unnamedplus'
+opt.clipboard = "unnamedplus"
 
 -- indentation
 opt.shiftwidth = 4
@@ -17,4 +17,6 @@ opt.scrolloff = 5
 opt.ignorecase = true
 opt.smartcase = true
 
-opt.belloff = all
+opt.belloff = "all"
+
+vim.o.completeopt = "menuone,noinsert,popup"
