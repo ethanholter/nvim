@@ -31,6 +31,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 
+vim.diagnostic.config({
+    virtual_text=true,
+    update_in_insert=true
+})
+
 -- c/cpp
 vim.lsp.config("clangd", {
     cmd = { "clangd", "--background-index", "clang-tidy" },
@@ -57,6 +62,7 @@ vim.lsp.config("basedpyright", {
     filetypes = { "python" },
     root_markers = { "pyrightconfig.json", "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile", ".git" },
 })
+
 vim.lsp.config("ruff", {
     cmd = { "ruff", "server" },
     filetypes = { "python" },

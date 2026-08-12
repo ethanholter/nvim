@@ -4,6 +4,9 @@ local wk = require("which-key")
 -- Conflict with tmux
 keymap.set("n", "<c-b>", "<Nop>")
 
+keymap.set("i", "jj", "<ESC>")
+keymap.set("i", "kk", "<ESC>")
+
 -- ============
 -- LEADER MAPS
 -- ============
