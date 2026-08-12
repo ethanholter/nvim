@@ -39,7 +39,8 @@ keymap.set("n", "<A-j>", ":move +1<CR>")
 keymap.set("n", "<A-up>", ":move -2<CR>")
 keymap.set("n", "<A-down>", ":move +1<CR>")
 
-keymap.set("v", "<A-k>", ":move \"<-2<CR>gv")
-keymap.set("v", "<A-j>", ":move \">+1<CR>gv")
-keymap.set("v", "<A-up>", ":move \"<-2<CR>gv")
-keymap.set("v", "<A-down>", ":move \">+1<<CR>gv")
+-- currently broken asf
+-- keymap.set("v", "<A-k>", ":move '<-2<CR>gv")
+-- keymap.set("v", "<A-j>", ":move '>+1<CR>gv")
+-- keymap.set("v", "<A-up>", ":move '<-2<CR>gv")
+-- keymap.set("v", "<A-down>", ":move '>+1<<CR>gv")
