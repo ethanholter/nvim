@@ -72,4 +72,10 @@ vim.lsp.config("ruff", {
     end
 })
 
-vim.lsp.enable({ "lua_ls", "clangd", "nix", "basedpyright", "ruff" })
+-- bash
+vim.lsp.config("bashls", {
+    cmd = { "bash-language-server", "start" },
+    filetypes = { "sh", "bash" },
+})
+
+vim.lsp.enable({ "lua_ls", "clangd", "nix", "basedpyright", "ruff", "bashls" })
