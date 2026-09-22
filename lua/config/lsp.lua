@@ -38,7 +38,7 @@ vim.diagnostic.config({
 
 -- c/cpp
 vim.lsp.config("clangd", {
-    cmd = { "clangd", "--background-index", "clang-tidy" },
+    cmd = { "clangd", "--background-index", "--clang-tidy" },
     filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
 })
 
